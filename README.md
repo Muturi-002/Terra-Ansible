@@ -13,9 +13,13 @@ Terraform modules:
 Ansible modules:
 - Create Ansible roles for:
   1. Dependencies role
+     
      Installing Docker, Docker Compose and other required dependencies
   2. Deployment role
+     
      Cloning the application repo- https://github.com/Muturi-002/DevOps-Stage-4
+     
      Executing Docker Compose to deploy the application
+     
      Setting up SSL/TLS with Traefik
 
