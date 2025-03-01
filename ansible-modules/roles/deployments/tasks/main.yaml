@@ -1,0 +1,16 @@
+#Clone the application repository
+- name: Clone application repository
+  git:
+    repo: "https://github.com/Muturi-002/DevOps-Stage-4.git"
+    dest: "/opt/app"
+    version: main
+
+- name: Deploy application with Docker Compose
+  docker_compose:
+    project_src: /opt/app
+    state: present
+
+- name: Ensure Traefik is configured
+  template:
+    src: traefik.toml.j2
+    dest: /opt/app/traefik.toml

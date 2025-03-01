@@ -1,0 +1,4 @@
+galaxy_info:
+  author: Martin Muturi
+  description: Installs dependencies like Docker and Docker Compose
+  min_ansible_version: "2.9"

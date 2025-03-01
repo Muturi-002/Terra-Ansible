@@ -1,0 +1,4 @@
+- name: Restart Traefik
+  service:
+    name: traefik
+    state: restarted
