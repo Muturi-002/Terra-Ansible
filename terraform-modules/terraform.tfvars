@@ -2,10 +2,7 @@ tenancy_ocid        = "ocid1.tenancy.oc1..aaaaaaaazinjwv46v6vuu6ihdgm2rwl4kcvh5l
 user_ocid           = "ocid1.user.oc1..aaaaaaaasofgiwjxiudryqa3atcaac4svdvy4rqgj2stgbquox2niiawfa3q"
 fingerprint         = "34:c5:02:79:d5:fb:f3:32:7e:18:2f:37:28:08:3d:74"
 region              = "af-johannesburg-1"
-availability_domain = "AD-1"
+availability_domain = "AD-1" 
 compartment_id      = "ocid1.tenancy.oc1..aaaaaaaazinjwv46v6vuu6ihdgm2rwl4kcvh5lpnkpwyatujrxba7c5tooda"
 instance_shape      = "VM.Standard2.1"
-image_id            = "ocid1.image.oc1.af-johannesburg-1.aaaaaaaaodpi2fhs5bc365igd6dsajsagpto2xsozmusaxpuk7vnfix2svza"
 ssh_public_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCgDkFLVGdX9jmO+aqrTU7EYMLJfITbjFKcfuHkapLfRzf9OAe3X5DHKKpzg+1oVZ0k0ZTBpFvkj2W/iF4uWWZhSXai0H+1z80a6lFchLMAHd+4l/w1MF26m0hwvN9uu2gd4HAVt+TWcQW9gAtiLoEuViUhOWYs7nPwrkrUV2NYZosjv4Z584oDl2MyFuEkVWYG/b6iXoxHoUgAfSsk/il2QJzZ307LBDi/6cAZECO3UO7XGMeHbL3/1haFqFQKFjWr3GyMcoaaRGciIIEuUzsHf7a53LdjBRI//kQqFr84AHT0UBhmP2fkPLNqyFVZmsNceBtkRRH7mN3VMw3vOhVmxus3WdNUvnR61Gk+beMmH9KRjEFqGbVidJHMt676UCVIYkxpVlWZ/WXrw0n4tLNzTjJAj/QRUsCGi5/s8MgOAedobbpTv5NXQgL7nV+aPuu01zWvEMgnsUdU04rJP4PRb1E04ZlasJNdQHfRpqNM86FLX1nAX3xVIiiuy58j4qEDYHaAwVMabQ+MUHMfj5DadE0oySv+i3b8MURl96mqAQhNdoPWeBJsUNxrQY37C7IS9UDDps4pZ0zwQU1f9PJ+tp2PuS3Qz2z6GuqxkCc5edxYquWIhTXsuBWPhHfTPPSaik7L0C8DpZCYJLjkYODif2q42mvfK+iUdQ+7sW0jrQ== muturiiii@HP-ProBook-x360-440-G1"
-
-subnet_id= "ocid1.subnet.oc1.af-johannesburg-1.aaaaaaaaqrd76235bkrm6w4k5hlaozosgh6bk6r2ajhziysd3bnwuo3dnyeq"

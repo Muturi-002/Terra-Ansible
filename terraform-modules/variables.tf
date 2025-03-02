@@ -4,10 +4,9 @@ variable "user_ocid" {}
 variable "fingerprint" {}
 variable "region" {}
 variable "compartment_id" {}
-variable "image_id" {}
 variable "availability_domain" {}
 variable "ssh_public_key" {}
-variable "subnet_id" {}
+variable "instance_shape" {}
 
 #Variables that can be dynamically set
 
@@ -32,7 +31,4 @@ variable "image_OS" {
 variable "image_version" {
   description = "Choose version of image desired:"
   default     = "24.04"
-}
-variable "instance_shape" {
-  default = "VM.Standard2.1"
 }
