@@ -23,9 +23,44 @@ Ansible modules:
      
      Setting up SSL/TLS with Traefik
 
+## File structure
+```
+Terra-Ansible/
+├── ansible-modules/
+│   ├── roles/
+│   │   ├── dependencies/
+│   │   │   └── defaults/
+│   │   │       └── main.yaml
+│   │   │   └── handlers/
+│   │   │       └── main.yaml
+│   │   │   └── meta/
+│   │   │       └── main.yaml
+│   │   │   └── tasks/
+│   │   │       └── main.yaml
+│   │   ├── deployment/
+│   │   │   └── defaults/
+│   │   │       └── main.yaml
+│   │   │   └── handlers/
+│   │   │       └── main.yaml
+│   │   │   └── meta/
+│   │   │       └── main.yaml
+│   │   │   └── tasks/
+│   │   │       └── main.yaml
+│   ├── inventory.ini
+│   └── playbook.yaml
+├── terraform-modules/
+│   ├── compute.tf
+│   ├── datasources.tf
+│   ├── networks.tf
+│   ├── terraform.tfvars
+│   └── variables.tf
+├──.gitignore
+└── README.md
+```
+
 ### Requirements
 - Terraform (v1.0.0 or later)
-- Ansible (v2.9.0 or later)
+- Ansible (v2.15.0 or later)
 - OCI CLI (for Oracle Cloud Infrastructure)
 - SSH key pair for accessing the provisioned instances
 
@@ -51,20 +86,15 @@ Ensure the following environment variables are set for OCI authentication:
 
 3. Create terraform.tfvars file with these contents:
 
-   ```file.tf
+   ```hcl
    tenancy_ocid         = "ocid1.tenancy.oc1..exampleuniqueID"
    user_ocid            = "ocid1.user.oc1..exampleuniqueID"
    fingerprint          = "20:3b:97:13:55:1c:aa:5e:fa:aa:bb:cc:dd:ee:ff:00"
-   private_key_path     = "/path/to/private_key.pem"
    region               = "us-ashburn-1"
-   availability_domain  = "example:AD-1"
+   availability_domain  = "example:AD-1" #use the ID of the availability domain, or 'data.oci_identity_availability_domains.ads.availability_domains[0].name' for dynamic results
    compartment_id       = "ocid1.compartment.oc1..exampleuniqueID"
    instance_shape       = "VM.Standard2.1"
-   subnet_id            = "ocid1.subnet.oc1..exampleuniqueID"
-   image_id             = "ocid1.image.oc1..exampleuniqueID"
    ssh_public_key       = "/path/to/ssh_public_key.pub"
-   instance_name        = "example-instance"
-   vcn_id               = "ocid1.vcn.oc1..exampleuniqueID"
    ```
 
 4. Apply configurations
